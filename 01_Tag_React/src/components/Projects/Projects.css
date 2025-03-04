@@ -1,0 +1,43 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 0 4rem 0;
+}
+
+section h2 {
+     margin-bottom: 3rem;
+}
+
+section .boxen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+
+section .boxen div {
+    background-color: var(--background-elemente-color);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 1px 1px 15px#131313 ;
+    width: 32%;
+}
+
+
+
+section .boxen h3{
+    margin-bottom: 1rem;
+}
+
+section .boxen p{
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+}
+
+section .boxen h4{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}

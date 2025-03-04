@@ -1,0 +1,15 @@
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 5rem;
+}
+
+.contact button {
+    margin-bottom: 10rem;
+}
+
+.contact p {
+    color: var(--main-color);
+    }

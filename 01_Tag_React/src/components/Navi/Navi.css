@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0 2rem 0;
+}
+
+
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--main-color);
+    font-family: var(--ff-reg);
+    font-size: 2rem;
+}
+
+nav img {
+    height: 25px;
+}

@@ -1,0 +1,13 @@
+section .skills div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem; 
+}
+
+section .skills p {
+    background-color: var(--background-elemente-color);
+    padding: 1rem 2rem;
+    color: var(--highlight-color);
+    margin-bottom: 2.5rem;
+}

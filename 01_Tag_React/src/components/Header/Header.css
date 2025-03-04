@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 0 4rem 0;
+}
+
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+header span {
+    color: var(--highlight-color);
+}
+
+header h4 {
+    margin-bottom: 1rem;
+}
+
+header p {
+    color: var(--main-color);
+    text-align: center;
+    max-width: 100rem;
+    margin-bottom: 3rem;
+}
