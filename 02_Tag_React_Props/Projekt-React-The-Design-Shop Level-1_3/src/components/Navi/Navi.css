@@ -1,0 +1,11 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    margin-bottom: 10rem;
+}
+
+nav a {
+    margin-right: 2rem;
+}

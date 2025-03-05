@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Karla_var";
+  src: url("/public/Karla/Karla-VariableFont_wght.ttf");
+}
+
+img {
+  max-width: 100%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Karla_var";
+}
+
+:root {
+  --color-dark: #323A45;
+  --color-light: #848484;
+}
+
+.wrapper {
+  background-color: #f4f6ff;
+  padding: 0 2rem 2rem 2rem;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 3rem;
+  color: var(--color-dark);
+}
+
+h4 {
+  font-size: 1.7rem;
+  color: var(--color-dark);
+}
+
+a, p {
+  font-size: 1.5rem;
+  color: var(--color-light);
+}
