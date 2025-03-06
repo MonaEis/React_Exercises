@@ -1,0 +1,39 @@
+main {
+    background-color: rgb(173, 173, 173);
+    padding: 0 4rem 4rem 4rem;
+    /* margin-bottom: 4rem; */
+}
+
+main section {
+    background-color: white;
+    padding: 0 2rem 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    }
+
+main section img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+main section h5 {
+    color: var(--c-green);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+main section p {
+    font-size: 1.5rem;
+    line-height: 2;
+    margin-bottom: 1rem;
+    max-width: 20rem;
+}
+
+main section h6 {
+    color: var(--c-green);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
