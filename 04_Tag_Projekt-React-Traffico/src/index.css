@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "Rubik";
+    src: url("../public/fonts/Rubik/Rubik-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "DM_Serif_Display_Reg";
+    src: url("../public/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-size: 10px;
+}
+
+:root {
+    --c-bg: #fef8f5;
+    --c-main-red: #ee4d47;
+    --c-sec-red: #FDEDE8;
+    --c-blue: #0f264c;
+    --c-dark-text: #402B2B;
+    --fs-16: 1.6rem;
+    --fs-18: 1.8rem;
+    --fs-20: 2rem;
+    --fs-24: 2.4rem;
+    --fs-100: 10rem;
+    --ff-main: "Rubik";
+    --ff-highlight: "DM_Serif_Display_Reg";
+}
+.super-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: var(--c-bg);
+}
+
+.wrapper {
+    min-height: 100vh;
+    width: 1490px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: var(--fs-16);
+    text-transform: uppercase;
+    font-family: var(--ff-main);
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+}
+
+button {
+    color: white;
+    font-size: var(--fs-16);
+    font-family: var(--ff-main);
+    font-weight: 500;
+    background-color: var(--c-main-red);
+    text-transform: uppercase;
+    border: none;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+}
+
+button img {
+  margin-left: 1rem;
+}
+
+h1 {
+    font-family: var(--ff-highlight);
+    font-size: var(--fs-100);
+    font-weight: 400;
+    color: white;
+    line-height: 10rem;
+}
+
+h3 {
+    color: var(--c-main-red);
+    font-family: var(--ff-main);
+    text-transform: uppercase;
+    font-size: var(--fs-24);
+    font-weight: 500;
+    line-height: 4rem;
+    letter-spacing: 0.2rem;
+}
+
+h4 {
+  color: var(--c-main-red);
+  font-family: var(--ff-main);
+  text-transform: uppercase;
+  font-size: var(--fs-16);
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  color: var(--c-main-red);
+  font-family: var(--ff-main);
+  font-size: var(--fs-16);
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.running-text {
+    font-family: var(--ff-main);
+    font-size: var(--fs-18);
+    columns: var(--c-dark-text);
+    font-weight: 200;
+    line-height: 3rem;
+}

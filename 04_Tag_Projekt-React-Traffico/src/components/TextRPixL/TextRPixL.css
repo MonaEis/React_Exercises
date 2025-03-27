@@ -1,0 +1,23 @@
+.pixl-tright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 20rem 5rem 20rem;
+    margin-bottom: 4rem;
+    gap: 3rem;
+}
+
+.pixl-tright h3{
+    margin-bottom: 4rem;
+}
+
+.pixl-tright img {
+    max-width: 44rem;
+}
+
+
+.pixl-tright .running-text {
+    margin-bottom: 6rem;
+    max-width: 40rem;
+}
+

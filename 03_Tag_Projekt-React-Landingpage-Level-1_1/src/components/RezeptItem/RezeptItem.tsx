@@ -12,7 +12,7 @@ const RezeptItem = (props: RezeptItemProps) => {
         <img src={props.rezeptImage} alt={props.rezeptName} />
         <h5>{props.rezeptName}</h5>
         <p>{props.rezeptDescription}</p>
-        <h6>{props.rezeptPrice}</h6>
+        <h6>€ {props.rezeptPrice}</h6>
       
     </div>
   )
