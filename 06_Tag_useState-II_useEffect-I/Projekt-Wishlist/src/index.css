@@ -6,4 +6,109 @@
 
 html {
   font-size: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 5rem;
+  background-color: rgb(203, 232, 205);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+section article{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  text-align: center;
+  width: 30vw;
+}
+
+section article h2 {
+  font-size: 2rem;
+  color: rgb(112, 120, 112);
+  margin-bottom: 2rem;
+}
+
+section article .input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section article .input input, section article .input select {
+  width: 50%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(231, 231, 231);
+  margin-bottom: 1rem;
+}
+
+section article button {
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(231, 231, 231);
+  color: white;
+  background-color: rgb(33, 203, 33);
+  margin-bottom: 3rem;
+}
+
+.output p {
+  text-align: center;
+}
+.output .output-items{
+ margin: auto;  
+  width: 80%;
+}
+
+
+.output .wishlist-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.output .wishlist-item #check {
+  height: 2rem;
+  width: 2rem;
+}
+
+.output .wishlist-item .single-item{
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  width: 70%;
+}
+
+.output .wishlist-item .low {
+  background-color: rgb(118, 244, 149);
+}
+
+.output .wishlist-item .high {
+  background-color: rgb(243, 85, 85);
+}
+
+.output .wishlist-item button{
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(243, 85, 85);
+  color: rgb(243, 85, 85);
+  background-color: rgb(231, 231, 231);
+  width: 20%;
 }
