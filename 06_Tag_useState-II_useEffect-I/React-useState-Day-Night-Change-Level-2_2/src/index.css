@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.output h1 {
+  font-size: 8rem;
+  margin-bottom: 2rem;
+}
+
+.output button {
+  padding: 1.5rem 2rem;
+  background-color: rgb(161, 160, 160);
+  border: 1px solid black;
+  border-radius: 2rem;
+}
+
+.day {
+  color: black;
+  background-color: white;
+}
+
+.night {
+  color: white;
+  background-color: rgb(38, 38, 38);
+}

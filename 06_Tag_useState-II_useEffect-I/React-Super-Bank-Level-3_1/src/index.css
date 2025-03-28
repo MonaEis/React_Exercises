@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+  background-color: rgb(80, 7, 111);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.output h1 {
+  color: azure;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.box {
+  background-color: #FDA7DC;
+  padding: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
+}
+
+.box h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.box p {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.box input {
+  height: 4rem;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+form div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  
+}
+
+form div button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  background-color: #FDA7DC;
+}
