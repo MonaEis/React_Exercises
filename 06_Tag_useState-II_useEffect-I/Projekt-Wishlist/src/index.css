@@ -24,7 +24,7 @@ main h1 {
   margin-bottom: 2rem;
 }
 
-section article{
+section form{
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -32,20 +32,20 @@ section article{
   width: 30vw;
 }
 
-section article h2 {
+section form h2 {
   font-size: 2rem;
   color: rgb(112, 120, 112);
   margin-bottom: 2rem;
 }
 
-section article .input {
+section form .input {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-section article .input input, section article .input select {
+section form .input input, section form .input select {
   width: 50%;
   height: 3rem;
   border-radius: 0.5rem;
@@ -53,7 +53,7 @@ section article .input input, section article .input select {
   margin-bottom: 1rem;
 }
 
-section article button {
+section form button {
   height: 3rem;
   border-radius: 0.5rem;
   border: 1px solid rgb(231, 231, 231);
@@ -62,46 +62,58 @@ section article button {
   margin-bottom: 3rem;
 }
 
-.output p {
-  text-align: center;
+section form button:disabled {
+  color: black;
+  background-color: rgb(84, 126, 84);
+ 
 }
-.output .output-items{
+
+.output {
  margin: auto;  
   width: 80%;
+  
 }
 
 
-.output .wishlist-item {
+.output li {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.output .wishlist-item #check {
+.output #checked {
   height: 2rem;
   width: 2rem;
+  width: 8%;
 }
 
-.output .wishlist-item .single-item{
+.output span {
+  width: 70%;
   height: 3rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  font-size: 1.5rem;
-  width: 70%;
+  justify-content: center;;
 }
 
-.output .wishlist-item .low {
+.output .completed{
+  text-decoration: line-through;
+}
+
+
+li .low {
   background-color: rgb(118, 244, 149);
 }
 
-.output .wishlist-item .high {
+li .high {
   background-color: rgb(243, 85, 85);
 }
 
-.output .wishlist-item button{
+li .delete{
   height: 3rem;
   display: flex;
   align-items: center;

@@ -1,17 +1,19 @@
-const AddToWishList = () => {
+import { Wish } from "../../App";
+import WishItem from "./WishItem";
+
+type AddToWishListProps = {
+    wishes: Wish[];
+    deleteWish: (deleteId: string) => void
+    changeWishFulfillment: (id: string, fulfilled: boolean) => void
+}
+
+const AddToWishList = ({wishes, deleteWish, changeWishFulfillment}: AddToWishListProps) => {
     return (
-        <div className="output">
-            <p>Santa's inbox is empty!</p>
-            <div className="output-items">
-                <div className="wishlist-item">
-                    <input type="checkbox" name="check" id="check" />
-                    <div className="low high single-item">
-                        <p>Handy</p>
-                    </div>
-                    <button>Delete</button>
-                </div>
-            </div>
-        </div>
+        <ul>
+            {wishes.map((wish)=> (
+                <WishItem key={wish.id} wish={wish} deleteWish={deleteWish} changeWishFulfillment={changeWishFulfillment}/>
+            ))}
+        </ul>
     );
 };
 
