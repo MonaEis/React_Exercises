@@ -95,3 +95,8 @@ li a {
   font-size: 1.8rem;
 }
 
+.error-message {
+  font-family: "Kanit_Italic";
+  color: pink;
+  font-size: 12rem;
+}
