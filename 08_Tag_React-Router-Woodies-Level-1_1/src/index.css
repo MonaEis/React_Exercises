@@ -161,6 +161,7 @@ footer .copyright {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4rem;
+    
 }
 
 .intro .icon-left {
@@ -196,6 +197,7 @@ footer .copyright {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10vw;
 }
 
 .about-content .yellow-container {
