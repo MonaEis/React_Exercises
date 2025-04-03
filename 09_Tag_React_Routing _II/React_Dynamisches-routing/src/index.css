@@ -14,6 +14,7 @@ img {
 }
 
 :root {
+    --fs-12: 1.2rem;
     --fs-16: 1.6rem;
     --fs-24: 2.4rem;
     --fs-32: 3.2rem;
@@ -112,4 +113,48 @@ nav a {
   font-size: var(--fs-16);
     font-weight: 900;
     margin-bottom: 3rem;
+}
+
+.details {
+  padding: 6.8rem 0 10rem 15vw;
+}
+
+.details article img {
+  border-radius: 1rem 0rem 0rem 1rem;
+  object-fit: cover;
+  height: 60rem;
+  width: 100%;
+}
+
+.details article .infos {
+  padding: 4.8rem 15vw 0 16rem;
+}
+
+.details article .infos-upper{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 4.8rem;
+
+}
+
+.details article h2{
+  font-size: var(--fs-24);
+  font-weight: 900;
+}
+
+.details article h3{
+  font-size: var(--fs-16);
+  font-weight: 900;
+}
+
+.details article p:nth-of-type(1){
+  font-size: var(--fs-16);
+  font-weight: 400;
+  margin-bottom: 2.4rem;
+}
+
+.details article p:nth-of-type(2){
+  font-size: var(--fs-12);
+  font-weight: 900;
 }
