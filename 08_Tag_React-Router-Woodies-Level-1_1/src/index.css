@@ -35,6 +35,24 @@ img {
     --fs-72: 7.2rem;
 }
 
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+main{
+flex: 1;
+}
+
+
+
 .yellow-btn {
     text-decoration: none;
     font-size: var(--fs-16);
@@ -51,6 +69,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 8vw;
+    /* height: 5%; */
 }
 
 nav img {
@@ -71,6 +90,7 @@ footer {
     background-position: right;
     background-size: contain;
     padding: 8rem 8vw 2.4rem 8vw;
+    /* height: 25%; */
 }
 
 footer section {
@@ -102,17 +122,12 @@ footer .copyright {
 }
 
 .home {
-    /* margin-top: -10rem; */
-
-    /* background: rgb(255, 255, 255);
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 1) 65%,
-        rgba(249, 189, 189, 1) 65%
-    ); */
+   /* min-height: 100vh; */
 
     padding: 8rem 1vw 12.2rem 10vw;
     position: relative;
+    /* min-height: 100%; */
+    
 }
 
 .home::before {
@@ -120,7 +135,7 @@ footer .copyright {
     background-color: rgba(249, 189, 189, 1);
     position: absolute;
     top: -1000px;
-    bottom: 0;
+    bottom: -500px;
     left: 65%;
     right: 0;
     z-index: -1;
@@ -154,6 +169,7 @@ footer .copyright {
 
 .about {
     padding: 8rem 10vw 18rem 10vw;
+    height: 70%;
 }
 
 .intro {
@@ -241,6 +257,7 @@ footer .copyright {
 
 .products {
     padding: 8rem 10vw 12rem 10vw;
+    height: 70%;
 }
 
 .products-content {
@@ -293,6 +310,8 @@ footer .copyright {
 
 .single-product {
     padding: 8rem 10vw 12rem 10vw;
+    height: 70vh;
+
 }
 
 .single-product-content {

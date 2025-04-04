@@ -51,11 +51,13 @@ const router = createBrowserRouter([
 
 
 function Layout() {
-  return <main>
-    <Navi/>
-    <Outlet/>
-    <Footer/>
+  return  <div className="layout-container">
+  <main className="main-content">
+    <Navi />
+    <Outlet />
   </main>
+  <Footer />
+</div>
 }
 
 
