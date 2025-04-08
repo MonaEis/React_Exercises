@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    /* margin: -1rem; */
+    padding: 5rem;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.light {
+    color: black;
+    background-color: whitesmoke;
+}
+
+.dark {
+    color: white;
+    background-color: rgb(87, 87, 87);
+}
+
+.blue {
+    color: rgb(54, 54, 54);
+    background-color: cornflowerblue;
+}
+
+.ouch {
+    color: lightseagreen;
+    background-color: lightcoral;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.light button {
+    background-color: black;
+    color: white;
+}
+
+.dark button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.blue button {
+    background-color: rgb(11, 58, 245);
+    color: white;
+}
+
+.ouch button {
+    background-color: lightseagreen;
+    color: lightcoral;
+}
