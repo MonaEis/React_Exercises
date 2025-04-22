@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback-Formular - Barrierefrei</title>
+    <meta name="description" content="Barrierefreies Formular zur Übermittlung von Feedback">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        primaryDark: '#1e40af',
+                        error: '#dc2626'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+    <main class="w-full max-w-md bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Header mit ARIA-Label für Screenreader -->
+        <header class="bg-primary py-5 px-6" aria-labelledby="formTitle">
+            <h1 id="formTitle" class="text-2xl font-bold text-white">Ihr Feedback</h1>
+            <p class="text-blue-100 mt-1">Wir freuen uns auf Ihre Meinung</p>
+        </header>
+        
+        <!-- Formular mit ARIA-Attributen -->
+        <form 
+            id="feedbackForm"
+            class="p-6 space-y-5"
+            aria-labelledby="formTitle"
+            aria-describedby="formInstructions"
+            onsubmit="return handleSubmit()"
+        >
+            <div id="formInstructions" class="sr-only">
+                Bitte füllen Sie alle Pflichtfelder aus. Diese sind mit einem Sternchen (*) markiert.
+            </div>
+            
+            <div id="formContent" class="space-y-5">
+                <!-- Name Field mit ARIA -->
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">
+                        <span>Name</span>
+                        <span class="text-error">*</span>
+                        <span class="sr-only">Pflichtfeld</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name"
+                        required
+                        aria-required="true"
+                        aria-describedby="nameHint nameError"
+                        class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition"
+                        placeholder="Max Mustermann"
+                        oninput="clearError(this, 'nameError')"
+                    >
+                    <p id="nameHint" class="mt-1 text-sm text-gray-500">Wie sollen wir Sie ansprechen?</p>
+                    <p id="nameError" role="alert" class="mt-1 text-sm text-error hidden" aria-live="polite">
+                        <span class="font-medium">Fehler:</span> Bitte geben Sie Ihren Namen ein
+                    </p>
+                </div>
+                
+                <!-- Email Field mit ARIA -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                        <span>E-Mail</span>
+                        <span class="text-error">*</span>
+                        <span class="sr-only">Pflichtfeld</span>
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        required
+                        aria-required="true"
+                        aria-describedby="emailHint emailError"
+                        class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition"
+                        placeholder="beispiel@email.com"
+                        oninput="clearError(this, 'emailError')"
+                    >
+                    <p id="emailHint" class="mt-1 text-sm text-gray-500">Für Rückfragen</p>
+                    <p id="emailError" role="alert" class="mt-1 text-sm text-error hidden" aria-live="polite">
+                        <span class="font-medium">Fehler:</span> Bitte geben Sie eine gültige E-Mail-Adresse ein
+                    </p>
+                </div>
+                
+                <!-- Message Field mit ARIA -->
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">
+                        <span>Nachricht</span>
+                        <span class="text-error">*</span>
+                        <span class="sr-only">Pflichtfeld</span>
+                    </label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="5"
+                        required
+                        aria-required="true"
+                        aria-describedby="messageHint messageError"
+                        class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition"
+                        placeholder="Ihre Meinung ist uns wichtig..."
+                        oninput="clearError(this, 'messageError')"
+                    ></textarea>
+                    <p id="messageHint" class="mt-1 text-sm text-gray-500">Mindestens 20 Zeichen</p>
+                    <p id="messageError" role="alert" class="mt-1 text-sm text-error hidden" aria-live="polite">
+                        <span class="font-medium">Fehler:</span> Bitte geben Sie Ihre Nachricht ein (mind. 20 Zeichen)
+                    </p>
+                </div>
+                
+                <!-- Submit Button mit Fokus-Styling -->
+                <button 
+                    type="submit"
+                    class="w-full bg-primary hover:bg-primaryDark text-white font-medium py-2.5 px-4 rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                >
+                    Absenden
+                </button>
+            </div>
+            
+            <!-- Success Message mit ARIA -->
+            <div 
+                id="successMessage" 
+                role="alert"
+                aria-live="assertive"
+                class="hidden p-5 bg-green-50 border-l-4 border-green-500 rounded"
+            >
+                <div class="flex items-start">
+                    <svg class="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <div>
+                        <p class="text-green-700 font-medium">Vielen Dank für Ihr Feedback!</p>
+                        <p class="mt-1 text-sm text-green-600">Wir haben Ihre Nachricht erhalten und werden uns bald bei Ihnen melden.</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Footer mit Kontaktalternative -->
+        <footer class="px-6 pb-6 text-center text-sm text-gray-500">
+            <p>* Pflichtfelder</p>
+            <p class="mt-2">Alternativ können Sie uns auch telefonisch unter <a href="tel:+49123456789" class="text-primary underline hover:text-primaryDark">+49 123 456789</a> erreichen.</p>
+        </footer>
+    </main>
+
+    <!-- Inline JavaScript für Barrierefreiheit -->
+    <script>
+        // Funktion zur Fehlerbehandlung
+        function showError(field, errorId, message) {
+            field.classList.add('border-error');
+            const errorElement = document.getElementById(errorId);
+            errorElement.textContent = message;
+            errorElement.classList.remove('hidden');
+            field.focus();
+            return false;
+        }
+
+        // Funktion zum Fehler zurücksetzen
+        function clearError(field, errorId) {
+            field.classList.remove('border-error');
+            document.getElementById(errorId).classList.add('hidden');
+        }
+
+        // Formularvalidierung
+        function handleSubmit() {
+            // Felder referenzieren
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const messageField = document.getElementById('message');
+            
+            // Validierung
+            let isValid = true;
+            
+            // Name validieren
+            if (nameField.value.trim() === '') {
+                isValid = showError(nameField, 'nameError', 'Fehler: Bitte geben Sie Ihren Namen ein');
+            }
+            
+            // Email validieren
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailField.value.trim())) {
+                isValid = showError(emailField, 'emailError', 'Fehler: Bitte geben Sie eine gültige E-Mail-Adresse ein');
+            }
+            
+            // Nachricht validieren
+            if (messageField.value.trim().length < 20) {
+                isValid = showError(messageField, 'messageError', 'Fehler: Bitte geben Sie eine ausführlichere Nachricht ein (mind. 20 Zeichen)');
+            }
+            
+            // Bei Erfolg
+            if (isValid) {
+                document.getElementById('formContent').classList.add('hidden');
+                const successMessage = document.getElementById('successMessage');
+                successMessage.classList.remove('hidden');
+                successMessage.setAttribute('tabindex', '-1');
+                successMessage.focus();
+                
+                // Für Screenreader: Erfolgsmeldung vorlesen
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'assertive');
+                announcement.className = 'sr-only';
+                announcement.textContent = 'Vielen Dank für Ihr Feedback. Das Formular wurde erfolgreich übermittelt.';
+                document.body.appendChild(announcement);
+                setTimeout(() => document.body.removeChild(announcement), 1000);
+            }
+            
+            return false; // Verhindert Formularabschickung für dieses Beispiel
+        }
+    </script>
+</body>
+</html>

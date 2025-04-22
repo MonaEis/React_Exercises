@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback-Formular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 120px;
+        }
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .rating input {
+            display: none;
+        }
+        .rating label {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ddd;
+        }
+        .rating input:checked ~ label {
+            color: #ffc107;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .success-message {
+            display: none;
+            background: #2ecc71;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ihr Feedback ist uns wichtig</h1>
+        <p>Bitte teilen Sie uns Ihre Erfahrungen mit. Wir schätzen jedes Feedback und werden es nutzen, um unsere Dienstleistungen zu verbessern.</p>
+        
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Name (optional):</label>
+                <input type="text" id="name" name="name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-Mail (optional):</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-group">
+                <label>Wie zufrieden sind Sie insgesamt?</label>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1" required>
+                    <label for="star1">★</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="feedback">Ihr Feedback:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="category">Kategorie:</label>
+                <select id="category" name="category">
+                    <option value="general">Allgemeines Feedback</option>
+                    <option value="bug">Problem/Bug melden</option>
+                    <option value="suggestion">Verbesserungsvorschlag</option>
+                    <option value="praise">Lob</option>
+                </select>
+            </div>
+            
+            <button type="submit">Feedback absenden</button>
+        </form>
+        
+        <div class="success-message" id="successMessage">
+            Vielen Dank für Ihr Feedback! Wir schätzen Ihre Zeit und Mühe.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hier würde normalerweise der Code stehen, um das Feedback an den Server zu senden
+            // Für dieses Beispiel zeigen wir nur die Erfolgsmeldung an
+            
+            document.getElementById('feedbackForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Optional: Formulardaten zurücksetzen
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+    "id": "sneaker123",
+    "name": "Nike Air Max 90",
+    "brand": "Nike",
+    "category": "Sneakers",
+    "description": "Klassischer Nike Air Max 90 mit zeitlosem Design und Air-Dämpfung für optimalen Komfort.",
+    "price": 139.99,
+    "currency": "EUR",
+    "sizes": [38, 39, 40, 41, 42, 43, 44, 45],
+    "colors": [
+      {
+        "name": "White/Black/Infrared",
+        "hex": "#ffffff/#000000/#ff2a2a"
+      }
+    ],
+    "stock": 25,
+    "releaseDate": "2025-03-15",
+    "images": [
+      "https://example.com/images/nike-air-max-90-front.jpg",
+      "https://example.com/images/nike-air-max-90-side.jpg",
+      "https://example.com/images/nike-air-max-90-back.jpg"
+    ],
+    "tags": ["retro", "air max", "komfort", "streetwear"],
+    "isLimitedEdition": false,
+    "rating": 4.7,
+    "reviewsCount": 142
+  }
