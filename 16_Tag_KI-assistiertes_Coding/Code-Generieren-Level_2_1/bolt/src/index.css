@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-pink: #FF2D95;
+  --neon-blue: #00F9FF;
+  --neon-purple: #9D00FF;
+  --dark-bg: #121212;
+  --darker-bg: #0A0A0A;
+  --light-text: #FFFFFF;
+  --grid-line: rgba(128, 128, 255, 0.1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#121212] text-white;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background-image: 
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+
+  h5, h6, button, .retro-text {
+    font-family: 'VT323', monospace;
+    letter-spacing: 1px;
+  }
+}
+
+@layer components {
+  .neon-text-pink {
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink), 
+                 0 0 10px var(--neon-pink), 
+                 0 0 20px var(--neon-pink);
+  }
+  
+  .neon-text-blue {
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue), 
+                 0 0 10px var(--neon-blue), 
+                 0 0 20px var(--neon-blue);
+  }
+  
+  .neon-border-pink {
+    border: 2px solid var(--neon-pink);
+    box-shadow: 0 0 5px var(--neon-pink), 
+                inset 0 0 5px var(--neon-pink);
+  }
+  
+  .neon-border-blue {
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 5px var(--neon-blue), 
+                inset 0 0 5px var(--neon-blue);
+  }
+  
+  .neon-button {
+    @apply relative overflow-hidden text-white font-bold py-3 px-8 rounded transition-all duration-300;
+    background: linear-gradient(45deg, var(--neon-pink), var(--neon-purple));
+    box-shadow: 0 0 10px var(--neon-pink), 
+                0 0 20px var(--neon-pink);
+    font-family: 'VT323', monospace;
+    font-size: 1.25rem;
+  }
+  
+  .neon-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--neon-pink), 
+                0 0 30px var(--neon-pink);
+  }
+  
+  .neon-button:active {
+    transform: translateY(1px);
+  }
+  
+  .scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 100;
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0, 0, 0, 0.05) 51%
+    );
+    background-size: 100% 4px;
+  }
+
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .card {
+    @apply bg-[#1A1A1A] rounded-lg p-6 transition-all duration-300;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card:hover {
+    @apply transform -translate-y-1;
+    box-shadow: 0 0 15px rgba(255, 45, 149, 0.3);
+  }
+  
+  .input-field {
+    @apply px-4 py-3 w-full bg-[#252525] border border-[#333] rounded-md text-white focus:outline-none;
+  }
+  
+  .input-field:focus {
+    @apply border-[#FF2D95];
+    box-shadow: 0 0 8px rgba(255, 45, 149, 0.3);
+  }
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at center, #1A1A1A 0%, #121212 100%);
+}
+
+/* Pulse animation for neon elements */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.neon-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
