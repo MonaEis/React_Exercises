@@ -1,0 +1,22 @@
+quiz-app/quiz-app/src/styles/Footer.module.css
+
+.footer {
+    background-color: #ffcc00; /* Helle Farbe für den Retro-Look */
+    color: #000; /* Schwarzer Text für Kontrast */
+    text-align: center; /* Zentrierter Text */
+    padding: 20px; /* Innenabstand */
+    font-family: 'Courier New', Courier, monospace; /* Retro-Schriftart */
+    font-size: 14px; /* Schriftgröße */
+    position: relative; /* Positionierung für eventuelle Anpassungen */
+    bottom: 0; /* Am unteren Rand der Seite */
+    width: 100%; /* Volle Breite */
+}
+
+.footer a {
+    color: #000; /* Linkfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Unterstreichung bei Hover */
+}

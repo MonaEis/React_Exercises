@@ -1,0 +1,18 @@
+.header {
+    background-color: #ffcc00; /* Helle Farbe für den Retro-Look */
+    color: #000; /* Schwarzer Text */
+    font-family: 'Courier New', Courier, monospace; /* Retro-Schriftart */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #ff6600; /* Dunklere Farbe für den unteren Rand */
+}
+
+.logo {
+    width: 100px; /* Breite des Logos */
+    margin-bottom: 10px; /* Abstand unter dem Logo */
+}
+
+.title {
+    font-size: 2.5rem; /* Große Schriftgröße für den Titel */
+    text-shadow: 2px 2px 0 rgba(255, 102, 0, 0.5); /* Schatten für den Titel */
+}

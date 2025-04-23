@@ -1,0 +1,53 @@
+/* Quiz-Komponente Styles */
+
+.quiz-container {
+    background-color: #ffcc00; /* Helles Gelb für den Retro-Look */
+    border: 5px solid #ff6699; /* Pinker Rahmen */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    font-family: 'Courier New', Courier, monospace; /* Retro-Schriftart */
+}
+
+.quiz-title {
+    font-size: 2rem;
+    color: #ff3366; /* Dunkelrosa für den Titel */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 1.5rem;
+    color: #333; /* Dunkle Schriftfarbe für Fragen */
+    margin-bottom: 15px;
+}
+
+.answer {
+    background-color: #ffffff; /* Weißer Hintergrund für Antworten */
+    border: 2px solid #ff6699; /* Pinker Rahmen um Antworten */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.answer:hover {
+    background-color: #ff6699; /* Hintergrundfarbe beim Hover */
+    color: #ffffff; /* Textfarbe beim Hover */
+}
+
+.submit-button {
+    background-color: #ff3366; /* Dunkelrosa für den Button */
+    color: #ffffff; /* Weiße Schriftfarbe */
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #ff6699; /* Hintergrundfarbe beim Hover */
+}

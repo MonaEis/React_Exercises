@@ -1,0 +1,31 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #ff6ec7;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #333;
+  border: 2px solid #ff6ec7;
+  color: #fff;
+  text-align: center;
+}
+
+li:hover {
+  background-color: #ff6ec7;
+  color: #333;
+}
