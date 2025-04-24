@@ -1,0 +1,43 @@
+body {
+    background-image: url('../assets/retro-background.svg');
+    background-size: cover;
+    color: #ffcc00;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.quiz-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #ff00ff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+.quiz-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.quiz-button {
+    background-color: #ff00ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quiz-button:hover {
+    background-color: #cc00cc;
+}
+
+.quiz-results {
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-shadow: 1px 1px 0 #000;
+}

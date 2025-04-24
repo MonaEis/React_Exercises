@@ -1,0 +1,35 @@
+body {
+    background-image: url('../assets/retro-background.svg');
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffcc00;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 0 #ff007f, 4px 4px 0 #00ffcc;
+}
+
+button {
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+.quiz-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}

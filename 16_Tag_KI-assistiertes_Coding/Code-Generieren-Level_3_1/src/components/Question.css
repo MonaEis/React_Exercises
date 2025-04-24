@@ -1,0 +1,31 @@
+body {
+    background-color: #ffcc00; /* Heller Gelbton für den 80er Jahre Look */
+    color: #000000; /* Schwarzer Text für Kontrast */
+    font-family: 'Courier New', Courier, monospace; /* Monospace Schriftart für Retro-Gefühl */
+    text-align: center; /* Zentrierter Text */
+    padding: 20px; /* Abstand um den Inhalt */
+}
+
+.question {
+    font-size: 24px; /* Größere Schriftgröße für die Frage */
+    margin-bottom: 20px; /* Abstand unter der Frage */
+}
+
+.answers {
+    list-style-type: none; /* Keine Aufzählungszeichen */
+    padding: 0; /* Kein Padding */
+}
+
+.answer {
+    background-color: #ff6699; /* Rosa Hintergrund für Antworten */
+    border: 2px solid #000000; /* Schwarzer Rand */
+    border-radius: 10px; /* Abgerundete Ecken */
+    margin: 10px 0; /* Abstand zwischen den Antworten */
+    padding: 10px; /* Innenabstand */
+    cursor: pointer; /* Zeiger-Cursor für interaktive Elemente */
+    transition: background-color 0.3s; /* Sanfte Übergänge für Hover-Effekte */
+}
+
+.answer:hover {
+    background-color: #ff3366; /* Dunkleres Rosa beim Hover */
+}

@@ -1,75 +1,54 @@
-# Quiz App
+# React + TypeScript + Vite
 
-## Overview
-This is a React-based quiz application that focuses on music trivia, specifically in the genres of Pop and Indie Rock. The app features an 80s retro design, providing a nostalgic experience while users test their knowledge.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
-- Multiple-choice questions related to Pop and Indie Rock music.
-- User-friendly interface with a retro aesthetic.
-- Displays results at the end of the quiz.
-- Responsive design for various devices.
+Currently, two official plugins are available:
 
-## Project Structure
-```
-quiz-app
-├── public
-│   ├── index.html        # Main HTML file
-│   └── favicon.ico       # Application favicon
-├── src
-│   ├── components        # React components
-│   │   ├── App.tsx      # Main component wrapper
-│   │   ├── Header.tsx   # Header component
-│   │   ├── Footer.tsx   # Footer component
-│   │   ├── Quiz.tsx     # Quiz component
-│   │   ├── Question.tsx  # Question component
-│   │   ├── Answer.tsx   # Answer component
-│   │   └── Results.tsx  # Results component
-│   ├── styles            # CSS styles
-│   │   ├── App.module.css
-│   │   ├── Header.module.css
-│   │   ├── Footer.module.css
-│   │   ├── Quiz.module.css
-│   │   ├── Question.module.css
-│   │   ├── Answer.module.css
-│   │   └── Results.module.css
-│   ├── assets            # Assets like fonts
-│   │   └── fonts
-│   ├── utils             # Utility functions
-│   │   └── helpers.ts
-│   ├── types             # Type definitions
-│   │   └── index.ts
-│   ├── App.tsx          # Main application component
-│   ├── index.tsx        # Entry point of the application
-│   └── react-app-env.d.ts # Type definitions for React app environment
-├── package.json          # NPM configuration file
-├── tsconfig.json         # TypeScript configuration file
-├── .eslintrc.json        # ESLint configuration
-└── .prettierrc           # Prettier configuration
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-## Installation
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd quiz-app
-   ```
-3. Install dependencies:
-   ```
-   npm install
-   ```
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## Usage
-To start the application, run:
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
 ```
-npm start
-```
-This will launch the app in your default web browser.
-
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
