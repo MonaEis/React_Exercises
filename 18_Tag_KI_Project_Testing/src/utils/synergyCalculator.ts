@@ -1,4 +1,5 @@
 import { CharacterClass, SynergyResult } from '../types';
+import { randomInRange } from './random.ts';
 
 export const calculateSynergy = (class1: CharacterClass | null, class2: CharacterClass | null): SynergyResult => {
   if (!class1 || !class2) {
@@ -69,6 +70,3 @@ export const calculateSynergy = (class1: CharacterClass | null, class2: Characte
   return { percentage, description, colorClass };
 };
 
-const randomInRange = (min: number, max: number): number => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
